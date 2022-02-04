@@ -1,6 +1,7 @@
 # azure-devops-api
 
-using client library we can create work item in azure devops
+by using this package lib we can create work item in azure devops 
+only work item creation is supported in this version
 
 # PAT
 personnal access token is very important for using this library
