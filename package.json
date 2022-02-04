@@ -20,5 +20,9 @@
     "create workitem in azure",
     "add workitem in azure",
     "add and assign workitem"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arunk28/azure-api"
+}
 }
