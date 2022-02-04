@@ -1,5 +1,5 @@
 {
-  "name": "azuredevops-createworkitem",
+  "name": "azure-devops-api",
   "version": "1.0.0",
   "description": "azure devops api for automating add the workitem",
   "main": "index.js",
