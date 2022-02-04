@@ -1,6 +1,6 @@
 # azure-devops-api
 
-by using this package lib we can create work item in azure devops 
+By using this package lib we can create work item in azure devops.
 only work item creation is supported in this version
 
 # PAT
