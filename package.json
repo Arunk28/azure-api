@@ -1,6 +1,6 @@
 {
   "name": "azure-devops-api",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "azure devops api for automating add the workitem",
   "main": "index.js",
   "scripts": {
