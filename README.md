@@ -15,7 +15,7 @@ npm i azure-devops-api
 # Usage
 
 ```
-const createWorkItem = require('azure-devops-api');
+const addWorkItem = require("azure-devops-api");
 
 let token = "PAT.............X";
 let type   = "<type like Bug,Task,UserStory....>";
@@ -24,7 +24,7 @@ let description  = <desc about the item>;
 let areaPath  ="<area path>";
 let iterationPath  = "<iteration path>";
 let assignedto  = "<assign email id>"
-createWorkItem(token,<org name>, <project name>, {
+const workItem = addWorkItem.createWorkItem(token,<org name>, <project name>, {
   type,
   title,
   description,
@@ -32,6 +32,9 @@ createWorkItem(token,<org name>, <project name>, {
   iterationPath,
   assignedto
 })
+
+console.log(workItem.then((workItemId) => console.log(workItemId)));
+
 ```
  
 # Package
