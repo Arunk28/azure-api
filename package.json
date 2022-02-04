@@ -9,10 +9,16 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.6.0",
     "azure-devops-node-api": "^11.1.0",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.5"
   },
-  "keywords":["azure","azuredevops","azure-api","create workitem in azure","add workitem in azure","add and assign workitem"]
+  "keywords": [
+    "azure",
+    "azuredevops",
+    "azure-api",
+    "create workitem in azure",
+    "add workitem in azure",
+    "add and assign workitem"
+  ]
 }

@@ -1,6 +1,6 @@
 
 import * as azdev from 'azure-devops-node-api';
-import * as core from '@actions/core';
+
 import {IWorkItemTrackingApi} from 'azure-devops-node-api/WorkItemTrackingApi';
 import {JsonPatchDocument} from 'azure-devops-node-api/interfaces/common/VSSInterfaces';
 
@@ -19,9 +19,9 @@ export async function createWorkItem(
   project: string,
   workItemInfo: IWorkItemInfo
 ): Promise<number> {
-  core.debug('Try get work item client');
+  
   const wiClient = await getWiClient(token, orgName);
-  core.debug('Got work item client');
+  
 
   const patchDoc = [
     {op: 'add', path: '/fields/System.Title', value: workItemInfo.title},
@@ -54,7 +54,7 @@ export async function createWorkItem(
       value: workItemInfo.assignedto
     });
   }
-  core.debug('Calling create work item...');
+  
   const workItem = await wiClient.createWorkItem(
     null,
     patchDoc,
@@ -75,10 +75,10 @@ async function getWiClient(
   orgName: string
 ): Promise<IWorkItemTrackingApi> {
   const orgUrl = `https://dev.azure.com/${orgName}`;
-  core.debug(`Connecting to ${orgUrl}`);
+  
   const authHandler = azdev.getPersonalAccessTokenHandler(token);
   const connection = new azdev.WebApi(orgUrl, authHandler);
 
-  core.info(`Connected successfully to ${orgUrl}!`);
+  
   return connection.getWorkItemTrackingApi();
 }
