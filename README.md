@@ -33,3 +33,6 @@ createWorkItem(token,<org name>, <project name>, {
 })
 ```
  
+# Package
+https://www.npmjs.com/package/azure-devops-api
+
