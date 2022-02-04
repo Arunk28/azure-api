@@ -2,7 +2,6 @@
   "name": "azure-devops-api",
   "version": "1.0.3",
   "description": "azure devops api for automating add the workitem",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,5 +23,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Arunk28/azure-api"
-  }
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ]
 }
