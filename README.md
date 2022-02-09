@@ -23,14 +23,16 @@ let title  = "<title>";
 let description  = <desc about the item>;
 let areaPath  ="<area path>";
 let iterationPath  = "<iteration path>";
-let assignedto  = "<assign email id>"
+let assignedto  = "<assign email id>";
+let parentLink = "<parent link url>" --> this is optional param
 const workItem = addWorkItem.createWorkItem(token,<org name>, <project name>, {
   type,
   title,
   description,
   areaPath,
   iterationPath,
-  assignedto
+  assignedto,
+  parentLink
 })
 
 console.log(workItem.then((workItemId) => console.log(workItemId)));
