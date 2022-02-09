@@ -24,7 +24,7 @@ let description  = <desc about the item>;
 let areaPath  ="<area path>";
 let iterationPath  = "<iteration path>";
 let assignedto  = "<assign email id>";
-let parentLink = "<parent link url>" --> this is optional param
+let parentLink = "<parent link url>" ; //--> this is optional param
 const workItem = addWorkItem.createWorkItem(token,<org name>, <project name>, {
   type,
   title,
