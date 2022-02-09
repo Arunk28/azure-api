@@ -11,6 +11,7 @@ export interface IWorkItemInfo {
   iterationPath: string;
   areaPath: string;
   assignedto : string;
+  parenturl  :string;
 }
 
 export async function createWorkItem(
@@ -52,6 +53,17 @@ export async function createWorkItem(
       op: 'add',
       path: '/fields/System.AssignedTo',
       value: workItemInfo.assignedto
+    });
+  }
+  
+  if(workItemInfo.parenturl !=''){
+    (patchDoc as any[]).push({
+      op: 'add',
+      path: '/relations/-',
+      value: {
+        "rel": "System.LinkTypes.Hierarchy-Reverse",
+        "url":  workItemInfo.parenturl,
+      }       
     });
   }
   
