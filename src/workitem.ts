@@ -11,6 +11,7 @@ export interface IWorkItemInfo {
   iterationPath: string;
   areaPath: string;
   assignedto : string;
+  parentLink: string;
 }
 
 export async function createWorkItem(
@@ -55,6 +56,16 @@ export async function createWorkItem(
     });
   }
   
+  if (workItemInfo.parentLink !== '') {
+    (patchDoc as any[]).push({
+      op: 'add',
+      path: "/relations/-",
+      value: {
+        rel: "System.LinkTypes.Hierarchy-Reverse",
+        url: workItemInfo.parentLink
+      }
+    });
+  }
 
   const workItem = await wiClient.createWorkItem(
     null,
