@@ -56,7 +56,7 @@ export async function createWorkItem(
     });
   }
   
-  if(workItemInfo.parenturl !=''){
+  if(workItemInfo.parenturl !==''){
     (patchDoc as any[]).push({
       op: 'add',
       path: '/relations/-',
@@ -66,7 +66,7 @@ export async function createWorkItem(
       }       
     });
   }
-  
+
   const workItem = await wiClient.createWorkItem(
     null,
     patchDoc,
